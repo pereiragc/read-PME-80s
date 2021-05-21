@@ -151,36 +151,34 @@ setCorrectNames <- function(dt_input, cnames_hint) {
 }
 
 
-## Note: `prealloc` is just for storing empty household/person entries
 pmeProcessLine <- function(pmeline, dt_col, n_entry, fname,
-                           .internal_parameters, prealloc) {
-  hhlength <- .internal_parameters$hhlength
-  personlength <- .internal_parameters$personlength
+                           col_breakdown, .internal_params) {
+  hhlength <- .internal_params$hhlength
+  personlength <- .internal_params$personlength
 
   ## 1. Deal with the "household substring"
 
   hhstr <- substr(pmeline, 1, hhlength)
-  hh <- mapHousehold(hhstr, n_entry,
-                     dt_col, parameters, prealloc)
+  hh <- mapHousehold(hhstr, n_entry, col_breakdown)
 
 
   ## 2. Start dealing with person substrings
-  npersons <- countPersons(pmeline, .internal_parameters)
+  npersons <- countPersons(pmeline, .internal_params)
 
   persons <- rbindlist(lapply(seq_len(npersons), function(i) {
     ch1 <- hhlength + (i - 1) * personlength + 1
     ch2 <- ch1 + personlength - 1
     personstr <- substr(pmeline, ch1, ch2)
-    mapPerson(personstr, n_entry, i, dt_col, .internal_parameters, prealloc)
+    mapPerson(personstr, n_entry, i, col_breakdown, .internal_params)
   }))
 
   return(list(hh = hh, persons = persons))
 }
 
-mapPerson <- function(personstr, n_entry, i, dt_col, .internal_parameters, prealloc) {
-  hhlength <- .internal_parameters$hhlength
+mapPerson <- function(personstr, n_entry, i, col_breakdown, .internal_params) {
+  hhlength <- .internal_params$hhlength
 
-  prealloc$perscols[, {
+  col_breakdown$perscols[, {
     list(n_entry = n_entry,
          person_id = i,
          val = substr(personstr,
@@ -189,10 +187,9 @@ mapPerson <- function(personstr, n_entry, i, dt_col, .internal_parameters, preal
   }, Name]
 }
 
-mapHousehold <- function(hhstr, n_entry, dt_col, prealloc) {
+mapHousehold <- function(hhstr, n_entry, col_breakdown) {
 
-  ## Note: syntax below is the `data.table` way of performing loops
-  prealloc$hhcols[, {
+  col_breakdown$hhcols[, {
     list(n_entry = n_entry,
          val = substr(hhstr, Start[1], End[1]))
   }, Name]
@@ -201,9 +198,9 @@ mapHousehold <- function(hhstr, n_entry, dt_col, prealloc) {
 
 
 
-countPersons <- function(pmeline, .internal_parameters) {
-  hhlength <- .internal_parameters$hhlength
-  personlength <- .internal_parameters$personlength
+countPersons <- function(pmeline, .internal_params) {
+  hhlength <- .internal_params$hhlength
+  personlength <- .internal_params$personlength
 
   npersons <- (nchar(pmeline) - hhlength) %/% personlength
 
