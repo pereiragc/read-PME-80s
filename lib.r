@@ -150,3 +150,62 @@ setCorrectNames <- function(dt_input, cnames_hint) {
   return(TRUE)
 }
 
+
+## Note: `prealloc` is just for storing empty household/person entries
+pmeProcessLine <- function(pmeline, dt_col, n_entry, fname,
+                           .internal_parameters, prealloc) {
+  hhlength <- .internal_parameters$hhlength
+  personlength <- .internal_parameters$personlength
+
+  ## 1. Deal with the "household substring"
+
+  hhstr <- substr(pmeline, 1, hhlength)
+  hh <- mapHousehold(hhstr, n_entry,
+                     dt_col, parameters, prealloc)
+
+
+  ## 2. Start dealing with person substrings
+  npersons <- countPersons(pmeline, .internal_parameters)
+
+  persons <- rbindlist(lapply(seq_len(npersons), function(i) {
+    ch1 <- hhlength + (i - 1) * personlength + 1
+    ch2 <- ch1 + personlength - 1
+    personstr <- substr(pmeline, ch1, ch2)
+    mapPerson(personstr, n_entry, i, dt_col, .internal_parameters, prealloc)
+  }))
+
+  return(list(hh = hh, persons = persons))
+}
+
+mapPerson <- function(personstr, n_entry, i, dt_col, .internal_parameters, prealloc) {
+  hhlength <- .internal_parameters$hhlength
+
+  prealloc$perscols[, {
+    list(n_entry = n_entry,
+         person_id = i,
+         val = substr(personstr,
+                      Start[1] - hhlength,
+                      End[1] - hhlength))
+  }, Name]
+}
+
+mapHousehold <- function(hhstr, n_entry, dt_col, prealloc) {
+
+  ## Note: syntax below is the `data.table` way of performing loops
+  prealloc$hhcols[, {
+    list(n_entry = n_entry,
+         val = substr(hhstr, Start[1], End[1]))
+  }, Name]
+
+}
+
+
+
+countPersons <- function(pmeline, .internal_parameters) {
+  hhlength <- .internal_parameters$hhlength
+  personlength <- .internal_parameters$personlength
+
+  npersons <- (nchar(pmeline) - hhlength) %/% personlength
+
+  return(max(npersons, 0L))
+}
