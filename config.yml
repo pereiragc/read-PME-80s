@@ -1,0 +1,7 @@
+# please adapt all config below
+base_data_path:
+batch_subpaths:
+- pme80_90:
+- pme91_00:
+- pme01:
+- pme02_15:

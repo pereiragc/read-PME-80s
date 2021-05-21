@@ -1,0 +1,1071 @@
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	
+1	Identificação	1	8		Z	 	 	
+102	Número de Controle	1	6		Z	 		
+103	Número de Série	7	2		N			
+10	Unidade da Federação	1	2		Z		6	
+	11- Rio de Janeiro							
+	21- São Paulo							
+	33- Rio Grande do Sul							
+	41- Minas Gerais 							
+	56- Pernambuco							
+	59- Bahia							
+11	Final do Controle 	3	3		Z			
+2	Pasta	29	5		Z	 		
+3	Situação	34	1		N	 	4	
+	1- urbana							
+	3- conglomerado urbano							
+	5- rural							
+	7- conglomerado rural							
+2001	Dia de Referência	35	2		N	 		
+2002	Mês de Referência	37	2		N 	 		
+7777	Item de grupo	41	110		L	 		
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+********   VARIÁVEIS DO DOMICÍLIO   *******								
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	
+101	Número no 202/203	9	4	 	N	 		
+104	Tipo de Entrevista	13	1		N	 	9	
+	1- entrevista realizada							
+	2- fechada							
+	3- recusa							
+	4- outras							
+	5- tipo B							
+	6- tipo C							
+	7- não identificado							
+	8- não identificado							
+ 	9- sem declaração	 	 	 	 	 		
+105	Mês da Pesquisa	14	2		N	 	12	
+ 	 1- janeiro	 	 	 	 	 		
+ 	 2- fevereiro	 	 	 	 	 	 	
+	 3- março							
+	 4- abril							
+	 5- maio							
+	 6- junho							
+	 7- julho							
+	 8- agosto							
+	 9- setembro							
+	10- outubro							
+	11- novembro							
+	12- dezembro							
+106	Remessa	16	1		N	 	4	
+ 	1- remessa 1	 	 	 		 	 	
+	2- remessa 2							
+	3- remessa 3							
+	4- remessa 4							
+107	Código do Entrevistador	17	3		N			
+108	Unidade Adicional	20	1		N		3	
+	1- é							
+	3- não é 							
+	9- sem declaração							
+109	Total de Pessoas	21	2		N			
+110	Total de 10 anos e mais	23	2		N 	 	31	
+	 0- não entrevista							
+	 1- 1 pessoa							
+	 2- 2 pessoas							
+	 3- 3 pessoas							
+	 4- 4 pessoas							
+ 	 5- 5 pessoas	 	 		 	 	 	
+ 	 6- 6 pessoas	 	 			 	 	
+ 	 7- 7 pessoas	 	 	 	 	 		
+ 	 8- 8 pessoas	 	 	 		 		
+ 	 9- 9 pessoas	 	 	 	 	 		
+								
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	
+110	Total de 10 anos e mais	23	2	 	N	 	31	
+	10- 10 pessoas							
+	11- 11 pessoas							
+	12- 12 pessoas							
+	16- 16 pessoas							
+	17- 17 pessoas							
+ 	18- 18 pessoas	 	 			 	 	
+	19- 19 pessoas							
+	20- 20 pessoas							
+ 	21- 21 pessoas	 	 	 	 	 	 	
+ 	22- 22 pessoas	 	 	 	 	 		
+ 	23- 23 pessoas	 	 	 	 	 	 	
+ 	24- 24 pessoas	 	 	 	 	 		
+ 	25- 25 pessoas	 	 	 	 	 	 	
+	26- 26 pessoas	 						
+	27- 27 pessoas							
+ 	28- 28 pessoas							
+	29- 29 pessoas							
+	30- 30 pessoas							
+111	Número de Ordem do Informante	25	2		N			
+112	Espécie do Domicílio	27	1		N		4	
+	2- particular	 						
+	4- coletivo							
+	9- sem declaração							
+ 	 - não aplicável	 	 	 	 	 	 	
+113	Alteração no PME 2.08	28	1	 	N	 	4	
+	1- tem							
+	3- não tem							
+	9- sem declaração							
+ 	 - não aplicável	 	 	 	 			
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+*******  VARIÁVEIS DAS PESSOAS   *******								
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+201	Número de Ordem	41	2	 	N	 	 	 
+202	Sexo	43	1	 	N	 	3	 
+ 	1- homem	 	 	 	 	 		 
+ 	3- mulher	 	 	 	 	 	 	 
+ 	 -header	 	 	 	 	 		 
+203	Condição no Domicílio	44	1	 	N	 	10	 
+	1- chefe	 						
+	2- cônjuge							
+ 	3- filho							 
+	4- outro parente							
+	5- agregado							
+ 	6- pensionista	 	 	 	 			 
+ 	7- empregado doméstico	 	 	 	 	 	 	 
+	8- parente empregado doméstico	 						
+	9- sem declaração							
+	 - header							
+204	Condição na Família	45	1	 	N	10	10	203
+205	Número da Família	46	1	 	N		10	 
+	1- uma família							
+	2- duas famílias							
+	3- três famílias							
+ 	4- quatro famílias	 	 	 	 			 
+	5- cinco famílias							
+	6- seis famílias							
+	7- sete famílias							
+	8- oito famílias							
+	9- nove famílias							
+ 	 - header							
+206	Dia de Nascimento	47	2		N	 	34	
+	 0- idade presumida							
+	 1- dia 1º							
+	 2- dia 2							
+	 3- dia 3							
+	 4- dia 4							
+	 5- dia 5							
+	 6- dia 6							
+	 7- dia 7							
+	 8- dia 8							
+	 9- dia 9							
+	10- dia 10							
+	11- dia 11							
+	12- dia 12							
+	13- dia 13							
+	14- dia 14							
+	15- dia 15							
+	16- dia 16 							
+	17- dia 17							
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+206	Dia de Nascimento	47	2		N	 	34	
+	18- dia 18							
+	19- dia 19							
+ 	20- dia 20	 	 	 	 	 	 	 
+ 	21- dia 21	 	 	 	 	 	 	 
+ 	22- dia 22	 	 	 	 	 		 
+ 	23- dia 23	 	 	 	 	 	 	 
+ 	24- dia 24	 	 	 	 	 		 
+ 	25- dia 25	 	 	 	 	 	 	 
+	26- dia 26	 						
+	27- dia 27							
+ 	28- dia 28							 
+	29- dia 29							
+	30- dia 30							
+ 	31- dia 31	 	 	 	 			 
+	99- sem declaração							
+ 	 - header	 	 	 	 	 	 	 
+236	Mês de Nascimento	49	2		N		16	
+	 1- janeiro							
+	 2- fevereiro							
+ 	 3- março	 	 	 	 	 	 	 
+	 4- abril		 	 	 	 	 	 
+	 5- maio							
+	 6- junho							
+	 7- julho							
+ 	 8- agosto	 	 	 	 			 
+	 9- setembro							
+	10- outubro							
+	11- novembro							
+	12- dezembro							
+	20- idade presumida morador							
+ 	30- idade presumida entr.							
+ 	99- sem declaração	 	 		 	 		
+	 - header							
+246	Ano de Nascimento	51	3		N			
+207	Sabe ler e escrever	54	1		N		4	
+	1- sim							
+	3- não							
+	9- sem declaração							
+	 - header							
+208	Freqüenta Escola	55	1		N		4	
+	1- sim							
+	3- não							
+	9- sem declaração							
+	 - header							
+209	Última série concluída	56	1		N		11	
+	0- grau sem relação							
+	1- 1ª série							
+	2- 2ª série							
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+209	Última série concluída	56	1		N		11	
+	3- 3ª série							
+	4- 4ª série							
+	5- 5ª série							
+	6- 6ª série							
+ 	7- 7ª série	 	 	 	 	 	 	 
+ 	8- 8ª série	 	 	 	 	 	 	 
+ 	9- sem declaração	 	 	 	 	 		 
+ 	 - header	 	 	 	 	 	 	 
+210	Grau	57	1	 	N	 	10	 
+ 	0- nunca freqüentou	 	 	 	 	 	 	 
+	1- elementar	 						
+	2- médio 1º ciclo							
+ 	3- 1º grau							 
+	4- médio 2º ciclo							
+	5- 2º grau							
+ 	6- superior	 	 	 	 			 
+ 	7- doutorado/mestrado	 	 	 	 	 	 	 
+ 	9- sem declaração	 	 	  	  		 	
+	 - header							
+211	Concluiu o curso?	58	1		N		4	
+ 	1- sim	 	 	 	 	 	 	 
+	3- não		 	 	 	 	 	 
+	9- sem declaração							
+	 - header							
+301	Que fez na semana?	59	1		N		10	
+ 	0- não determinado	 	 	 	 			 
+	1- trabalhou							
+	2- tinha trabalhado							
+	3- procurou trabalho							
+	4- aposentado/pensionista 							
+	5- estudante							
+ 	6- afazeres domésticos							
+ 	7- outra	 	 		 	 		
+	9- sem declaração							
+ 	 -header	 	 	 	 			
+302	Tinha outro trabalho /sem	60	1		N		4	
+	1- sim							
+	3- não							
+	9- ignorado							
+	 - não aplicável							
+303	Ocupação na semana	61	3		N		373	
+	  1- agricultor							
+	  2- criador de bovinos							
+	  3- avicultor							
+	  4- criador de diversos							
+ 	  5- prop. Agrop.  S/ especific	 	 	 	 		 	
+	  6- emp. Extração vegetal pesc							
+	  7- emp. Extração mineral							
+ 								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+303	Ocupação na semana	61	3		N		373	
+	  8- emp. Indústria de transfor							
+	  9- emp. Construção Civil							
+	 10- comerciante							
+	 11- hotel, dono de pensão							
+	 12- empresas de transportes							
+ 	 13- outros proprietários	 	 	 	 	 	 	 
+ 	 20- ministro, etc. 	 	 	 	 	 	 	 
+ 	 21- diretor assessor	 	 	 	 	 		 
+ 	 24- não identificado	 	 	 	 	 	 	 
+ 	 26- não identificado		 	  	 	 	 	 
+ 	 30- adm. Agropecuário	 	 	 	 	 	 	 
+	 31- adm. Extração veg. pesca	 						
+	 32- adm. Extração mineral							
+ 	 33- adm. Indústria de transf.							 
+	 34- adm. Construção civil							
+	 35- adm. Com. Mercad.							
+ 	 36- adm. Hotéis	 	 	 	 			 
+ 	 37- adm. Transportes	 	 	 	 	 	 	 
+ 	 38- adm. Financeiras	 	 	  	  		 	
+	 39- outros administradores							
+ 	 40- encarregado administrativo	 	 			 	 	
+ 	 50- fiscais de tributos	 	 	 	 	 	 	 
+	 51- inspetor trabalho		 	 	 	 	 	 
+	 52- assistente administrativo 							
+	 53- caixas							
+	 54- almoxarifes	 	 		 		 	
+ 	 55- expedidores	 	 	 	 			 
+	 56- datilógrafos							
+	 57- operador  tele-impressor							
+	 58- op. Maq. p. automática							
+	 59- secretárias 							
+	 60- auxiliar contábil							
+ 	 61- operador de copiadoras 							
+ 	 62- arquivistas	 	 		 	 		
+	 63- recepcionistas							
+ 	 64- auxiliar administrativo	 	 	 	 			
+	 65- auxiliar de escritório	 	 		 		 	
+	101- engenheiro							
+	102- arquitetos							
+	103- agrimensores							
+	104- cartógrafos							
+ 	111- desenhistas	 	 		 		 	
+	112- técnico em edificações							
+	113- outras ocupações eng.							
+	121- químicos							
+	122- farmacêuticos							
+ 	123- físicos	 	 	 	 		 	
+	124- geólogos mineral.							
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+303	Ocupação na semana	61	3		N		373	
+	125- outros química/física							
+	131- técnicos químicos							
+	132- prático farmácia							
+	133- técnicos meteorológicos							
+	141- agrônomos							
+	142- biologistas							
+ 	143- farmacologistas	 	 	 	 	 	 	 
+ 	144- veterinários	 	 	 	 	 	 	 
+ 	151- médicos	 	 	 	 	 		 
+ 	152- dentistas	 	 	 	 	 	 	 
+ 	153- enfermeiro diplomado		 	  	 	 	 	 
+ 	154- outra medicina	 	 	 	 	 	 	 
+	161- acadêmico hosp	 						
+	162- enfermeiro não diplomado							
+ 	163- massagistas							 
+	164- ortoptistas/óticos							
+	165- op. eq. médicos							
+ 	166- parteiras	 	 	 	 			 
+ 	167- protéticos	 	 	 	 	 	 	 
+ 	168- téc. anal.clínica	 	 	  	  		 	
+	171- matemáticos							
+ 	172- estatísticos	 	 			 	 	
+ 	173- analista de sistemas	 	 	 	 	 	 	 
+	181- economistas		 	 	 	 	 	 
+	182- contadores							
+	183- técnico administrativos 							
+	191- técnico em contabilidade	 	 		 		 	
+ 	192- técnico em estatística	 	 	 	 			 
+	193- programador de computador							
+	196- não identificado							
+	201- sociólogos, etc. 							
+	202- psicólogos							
+	203- geógrafos							
+ 	204- assistentes sociais							
+ 	205- outros cient. soc.	 	 		 	 		
+	211- professor pesquisador							
+ 	212- professor superior	 	 	 	 			
+ 	213- professor de 2º grau	 	 		 		 	
+	214- professor de 5º a 8º série							
+	215- professor de 1ª a 4ª série							
+	216- professor de 1º grau							
+	217- professor pré-escolar							
+	218- professor profissional							
+ 	219- professor	 	 		 		 	
+	221- orientador de ensino							
+	222- inspetor de alunos							
+	231- magistrados							
+	232- procuradores, etc. 							
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+303	Ocupação na semana	61	3		N		373	
+ 	233- advogados, etc.	 	 	 	 		 	
+	241- tabeliães							
+	242- escrivães							
+	243- oficiais de justiça							
+	244- outros auxiliares justiça  							
+	251- religiosos							
+	261- escritor jornalístico							
+	271- escultor, pintor							
+ 	272- artesão	 	 	 	 	 	 	 
+ 	273- decorador/cenógrafo	 	 	 	 	 	 	 
+ 	274- fotógrafos	 	 	 	 	 		 
+ 	275- músicos/compositor	 	 	 	 	 	 	 
+ 	276- artista tv/cinema/teatro		 	  	 	 	 	 
+ 	277- artista de circo	 	 	 	 	 	 	 
+	278- locutores/comentaristas	 						
+	279- prod. diretor espet.							
+ 	280- cinegrafistas, etc.							 
+	281- op. eq. de som e cenog.							
+	282- outros op. rádio/tv							
+ 	283- op. projetor de cinema	 	 	 	 			 
+ 	291- bibliotecários	 	 	 	 	 	 	 
+ 	292- museólogos arq.	 	 	  	  		 	
+	293- outras ocupações							
+ 	301- produtor agropecuário aut.	 	 			 	 	
+ 	302- técnico agropecuário	 	 	 	 	 	 	 
+	303- tratoristas agrícolas		 	 	 	 	 	 
+	304- outros trabalhos agrop.							
+	321- caçadores							
+	322- pescadores	 	 		 		 	
+ 	331- madereiros	 	 	 	 			 
+	332- lenhadores							
+	333- carvoeiros							
+	334- seringueiros							
+	335- ervateiros							
+	336- apanhad. produtos vegetais							
+ 	341- mineiros							
+ 	345- canteiros/marroei	 	 		 	 		
+	351- op. maq. extração mineral							
+ 	361- trab. Ext. gás petróleo	 	 	 	 			
+ 	371- garimpeiros	 	 		 		 	
+	381- salineiros							
+	391- sondad. poço gás							
+	401- téc. emp. extração mineral							
+	402- técnico indústria transf. 							
+ 	403- mestres indústria têxteis	 	 		 		 	
+	404- mestre construção civil							
+	405- técnico energia elétrica							
+	406- outros mestres							
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+303	Ocupação na semana	61	3		N		373	
+	411- forneiro metalúrgico							
+ 	412- laminadores	 	 	 	 		 	
+	413- trefiladores							
+	414- modeladores mach.							
+	415- galvanizador, etc.							
+	416- afiadores/amoladores							
+	417- polidores esmeril							
+	418- ferramenteiros							
+	419- estampadores meca.							
+ 	420- operador prensa	 	 	 	 	 	 	 
+ 	421- fresador/furador	 	 	 	 	 	 	 
+ 	422- torneiro mecânico	 	 	 	 	 		 
+ 	423- ajustador montador	 	 	 	 	 	 	 
+ 	424- mecânico veículo		 	  	 	 	 	 
+ 	425- mecânicos	 	 	 	 	 	 	 
+	426- soldadores	 						
+	427- rebitadores							
+ 	428- caldeireiros							 
+	429- ferreiros/serralheiros							
+	430- funileiros							
+ 	431- lanterneiros	 	 	 	 			 
+ 	440- não identificado	 	 	 	 	 	 	 
+ 	441- cardador/pentead.	 	 	  	  		 	
+	442- maçaroqueiro bob.							
+ 	443- fiandeiros	 	 			 	 	
+ 	444- rendeiros	 	 	 	 	 	 	 
+	445- urdidores		 	 	 	 	 	 
+	446- cordoeiros							
+	447- tecelões							
+	448- tapeceiros	 	 		 		 	
+ 	449- redeiros	 	 	 	 			 
+	450- alvejadores tintureiro							
+	451- estampador têxtil							
+	452- acabador d. pano							
+	461- correeiro seleiro							
+	462- curtidores							
+ 	470- alfaiates costureiros							
+ 	471- auxiliar de costura	 	 		 	 		
+	472- calçeiros/camiseiros							
+ 	473- modelistas cort.	 	 	 	 			
+ 	474- bordadeiras/cerzideiras	 	 		 		 	
+	475- chapeleiro palha							
+	476- chapeleiro exc. palha							
+	477- sapateiros							
+	478- trabalho fabric. sapato							
+ 	479- bolseiro/cinteiro	 	 		 		 	
+	481- marceneiro							
+	482- carpinteiro							
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+303	Ocupação na semana	61	3		N		373	
+	483- tanoeiros							
+	484- operador maq. marceneiro							
+ 	485- serradores	 	 	 	 		 	
+	486- prep. Compensado							
+	487- estofador capoteiro							
+	488- colchoeiros							
+	489- lustrador madereiro							
+	490- cesteiro e estei							
+	491- montador equip. elétrico							
+	492- montador equip. eletronica							
+ 	493- reparador  de equipamentos	 	 	 	 	 	 	 
+ 	494- montador rádio/tv	 	 	 	 	 	 	 
+ 	495- reparador rádio/tv	 	 	 	 	 		 
+ 	496- elétricista instalador	 	 	 	 	 	 	 
+ 	497- inst rep eq telégrafo 		 	  	 	 	 	 
+ 	498- inst rep lin elétrico	 	 	 	 	 	 	 
+	499- op inst energia elétrica	 						
+	511- armador concreto							
+ 	512- pedreiros							 
+	513- servente de pedreiros							
+	514- pintor caiador							
+ 	515- estucador	 	 	 	 			 
+ 	516- ladrilheiro taq	 	 	 	 	 	 	 
+ 	517- encanadores	 	 	  	  		 	
+	518- vidraceiro							
+ 	519- calceteiro asfal	 	 			 	 	
+ 	520- calafates	 	 	 	 	 	 	 
+	521- op máq construção civil		 	 	 	 	 	 
+	531- linguiceiro salsicheiro							
+	532- charqueadores							
+	533- magarefes	 	 		 		 	
+ 	534- ocupação indústria laticín	 	 	 	 			 
+	535- doceiros e confeiteiros							
+	536- macarroneiro pas							
+	537- padeiros							
+	538- farinheiro moleiro							
+	539- ocupação indústria açúcar							
+ 	540- ocupação indústria bebidas							
+ 	541- ocupação indústria café	 	 		 	 		
+	542- ocupação indústria pescado							
+ 	543- ocupação indústria chá,etc 	 	 	 	 			
+ 	544- ocupação indústria oleagin	 	 		 		 	
+	545- ocupação indústria aliment							
+	551- linotipistas							
+	552- tipógrafos							
+	553- clicheristas e gr							
+ 	554- impressores	 	 		 		 	
+	555- revista indústria gráfica							
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+303	Ocupação na semana	61	3		N		373	
+	556- encadernador car							
+	557- outras ocup ind gráfica 							
+	561- vidreiro/ampoleiro							
+ 	562- ceramistas/louçeiros	 	 	 	 		 	
+	563- pintores cerâmica							
+	564- oleiros							
+	571- inspetor de qualidade							
+	572- ourives/relojoeiro							
+	573- lapidadores							
+	574- borracheiros							
+	575- vulcanizador rec							
+ 	576- fogueteiros	 	 	 	 	 	 	 
+ 	577- vassoureiros	 	 	 	 	 	 	 
+ 	578- marmoristas	 	 	 	 	 		 
+ 	579- preparadores fumo	 	 	 	 	 	 	 
+ 	580- charuteiros cigarro		 	  	 	 	 	 
+ 	581- pintores a pistola	 	 	 	 	 	 	 
+	582- operador de empilhadeira	 						
+	583- foguista							
+ 	584- emb mercadorias							 
+	585- ocupação indústria papel							
+	586- ocup ind artigo borracha							
+ 	587- oc ind artigo cimento	 	 	 	 			 
+ 	588- supervisor/segurança	 	 	 	 	 	 	 
+ 	589- outroa ocup indústria tra	 	 	  	  		 	
+	601- comércio conta própria							
+ 	602- vendedores	 	 			 	 	
+ 	603- operador de caixa	 	 	 	 	 	 	 
+	604- repositor de mercadorias		 	 	 	 	 	 
+	605- demonstradores							
+	611- feirantes							
+	612- aguadeiros	 	 		 		 	
+ 	613- doceiros, etc.	 	 	 	 			 
+	614- quitandeiros, etc.							
+	615- tripeiro, etc.							
+	616- bilheteiros							
+	617- outra ocupação ambulante							
+	621- vendedores jornal revista							
+ 	631- pracistas e viajantes							
+ 	632- representante comercial	 	 		 	 		
+	633- propagandista							
+ 	641- corretor de seguros	 	 	 	 			
+ 	642- corretor de imóveis	 	 		 		 	
+	643- corretor títulos e valores							
+	644- avaliador/leiloeiro 							
+	645- outros agentes corretor 							
+	646- compradores							
+ 	711- aviador civil	 	 		 		 	
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+303	Ocupação na semana	61	3		N		373	
+	712- comissário de bordo							
+	721- oficial marinha mercante							
+	722- mestres de embarcações 							
+	723- maquinista de embarcação							
+ 	724- foguista de embarcação	 	 	 	 		 	
+	725- marinheiro civil							
+	726- taifeiros							
+	727- barqueiros e  canoeiros							
+	731- guindasteiros							
+	732- estivadores							
+	741- agente estrada de ferro 							
+	742- condutor chefe trem							
+ 	743-  maquinista de trem	 	 	 	 	 	 	 
+ 	744- foguista de trem	 	 	 	 	 	 	 
+ 	745- guarda-freios	 	 	 	 	 		 
+ 	746- manobreiro sinal	 	 	 	 	 	 	 
+ 	751- motoristas		 	  	 	 	 	 
+ 	752- trocadores	 	 	 	 	 	 	 
+	753- carroceiro trop	 						
+	761- inspetor desp transp							
+ 	762- trab cons ferrovia							 
+	771- agente postal e tele							
+	772- postalistas							
+ 	773- telegr radiotel	 	 	 	 			 
+ 	774- telefonistas	 	 	 	 	 	 	 
+ 	775- carteiros	 	 	  	  		 	
+	776- guarda-fios							
+ 	777- não identificado	 	 			 	 	
+ 	801- proprietários	 	 	 	 	 	 	 
+	805- empregado doméstico		 	 	 	 	 	 
+	811- hotel don pensão							
+	812- camareiros							
+	813- cozinheiros	 	 		 		 	
+ 	814- garçons	 	 	 	 			 
+	815- atendente de bar							
+	821- cabeleireiros							
+	822- barbeiros							
+	823- maquiladores, etc. 							
+	824- manicuro e pedicuro							
+ 	825- lavadeira e passadeira							
+ 	826- engraxates	 	 		 	 		
+	831- jogador de futebol							
+ 	832- lutador/atleta	 	 	 	 			
+ 	833- juiz de esportes	 	 		 		 	
+	834- técnico de esportes							
+	841- porteiros							
+	842- ascensoristas							
+	843- vigias							
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+303	Ocupação na semana	61	3		N		373	
+ 	844- serventes	 	 		 		 	
+	845- contínuos							
+	851- oficial das forças armadas							
+	852- praça da forças armadas							
+	853- oficial praças bomb							
+ 	854- delegado/comiss de polícia 	 	 	 	 		 	
+	855- investigador policial							
+	856- guarda-civil insp							
+	857- carcereiro, etc.							
+	858- datiloscopista							
+	859- guarda-vigia particular							
+	905- não identificado							
+	911- aprendizes							
+ 	912- bilheteiro diverso	 	 	 	 	 	 	 
+ 	913- bomb exc c bom	 	 	 	 	 	 	 
+ 	914- capatazes	 	 	 	 	 		 
+ 	915- dedetizadores	 	 	 	 	 	 	 
+ 	916- guarda automóveis		 	  	 	 	 	 
+ 	917- guarda sanitário	 	 	 	 	 	 	 
+	918- inspetor fiscais	 						
+	919- jardineiro exc lavoura 							
+ 	920- lixeiros							 
+	921- lubrificadores							
+	922- operador trat água							
+ 	923- op máq exc agropecuária	 	 	 	 			 
+ 	924- trabalhador braçal	 	 	 	 	 	 	 
+ 	925- trab conservação rodovia	 	 	  	  		 	
+	926- outras ocup mal definidas 							
+ 	927- sem declaração	 	 			 	 	
+ 	   - não aplicável	 	 	 	 	 	 	 
+304	Atividade/ramo do negócio	64	3	 	N	 	177	 
+	  2- não identificado							
+	  3- não identificado							
+	 11- cultura de agave 	 	 		 		 	
+ 	 12- cultura de algodão	 	 	 	 			 
+	 13- cultura de arroz							
+	 14- cultura de banana							
+	 15- cultura de cacau							
+	 16- cultura de café							
+	 17- cultura de cana-de-açúcar 							
+ 	 18- cultura de fumo							
+ 	 19- cultura de mandioca	 	 		 	 		
+	 20- cultura de milho							
+ 	 21- cultura de soja	 	 	 	 			
+ 	 22- cultura de trigo	 	 		 		 	
+	 23- horticultura/floricultura							
+	 24- silvicultura							
+	 25- cultura não discriminada							
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+304	Atividade/ramo do negócio	64	3	 	N	 	177	 
+	 26- pecuária							
+ 	 27- avicultura 	 	 		 		 	
+	 28- apicultura/sericultura							
+	 29- atividade não definida							
+	 31- extração da borracha							
+	 32- extração de erva-mate							
+ 	 33- extração de plantas fibr	 	 	 	 		 	
+	 34- extração frutos/sementes							
+	 35- extração de madeiras							
+	 36- produção de carvão vegetal							
+	 37- atividade não definida							
+	 41- pesca							
+	 42- piscicultura							
+	 50- extração apar mat com							
+ 	 51- extração petr gás natural	 	 	 	 	 	 	 
+ 	 52- extração de carvão vegetal 	 	 	 	 	 	 	 
+ 	 53- exploração salinas font	 	 	 	 	 		 
+ 	 54- fais gar min nmet 	 	 	 	 	 	 	 
+ 	 55- fais gar min met		 	  	 	 	 	 
+ 	" 56- extração mineral radioati-
+     va"	 	 	 	 	 	 	 
+	" 57- extração mineral não meta-
+     licos"	 						
+	 58- extração mineral metálicos							
+ 	 59- atividade não definida							 
+	"100- indústria de transformação
+     de mineral não metálico"							
+	110- indústria metalúrgicas							
+ 	120- indústria mecânicas	 	 	 	 			 
+ 	"130- indústria de material elé-
+     trico com"	 	 	 	 	 	 	 
+ 	"140- indústria de material de
+     transporte"	 	 	  	  		 	
+	150- indústria da madeira 							
+ 	151- indústria domic art pal	 	 			 	 	
+ 	160- indústria de mobiliário	 	 	 	 	 	 	 
+	170- indústria de papel/papelão	  	 	 	 	 	 	 
+ 	180- indústria da borracha							
+	190- indústria couros e peles							
+	200- indústrias químicas 	 	 		 		 	
+ 	"201- indústria de produtos   do
+     petróleo"	 	 	 	 			 
+	"210- indústria da farmácia e da
+     veterinária"							
+	"220- indústria de perfumaria  e
+     sabão ve"							
+	"230- indústria    de   produtos 
+     plásticos"							
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+304	Atividade/ramo do negócio	64	3	 	N	 	177	 
+	240- indústria têxteis							
+	241- indústria domic têxteis							
+ 	250- indústria do vestuário							
+ 	251- indústria de calçados	 	 		 	 		
+	"260- indústria de produtos ali-
+     mentícios"							
+ 	261- não identificado	 	 	 	 			
+ 	270- indústria de bebidas	 	 		 		 	
+	272- não identificado							
+	280- indústria do fumo							
+	"290- indústria  de editoração e
+     gráfica"							
+	300- atividade não definida							
+ 	314- não identificado	 	 		 		 	
+	340- indústria da construção							
+	"351- produção e distribuição en
+     el"							
+	"352- produção e distribuição de
+     gás canalizado "							
+	353- abastecimento de água,etc.							
+	"354- limpeza pública e  remoção
+     de lixo"							
+	400- não identificado							
+ 	"410- comércio de produtos agro-
+     pecuário ex"	 	 	 	 	 	 	 
+ 	"411- comércio de gêneros   ali-
+     mentícios"	 	 	 	 	 	 	 
+ 	"412- comércio  tecidos  artigos
+     de tecidos"	 	 	 	 	 		 
+ 	413- comércio mov tapec art	 	 	 	 	 	 	 
+ 	414- comércio de papel impresso		 	  	 	 	 	 
+ 	415- comércio de ferragens,etc.	 	 	 	 	 	 	 
+	416- comércio maq aparel in	 						
+	"417- comércio  de  veículos   e
+     acessórios"							
+ 	"418- comércio de produtos  quí-
+     micos e farmacêuticos"							 
+	"419- comércio de combustíveis e 
+     lubrificantes"							
+	420- comércio ambulante							
+ 	421- feiras	 	 	 	 			 
+ 	422- supermercados	 	 	 	 	 	 	 
+ 	423- loja de departamentos	 	 	  	  		 	
+	424- atividade não definida							
+ 	430- não identificado		 			 	 	
+ 	451- bancos, financeiras, etc.  		 	 	 	 	 	 
+	"452- caixas econômicas e coope-
+     rativas"	  	 	 	 	 	 	 
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+304	Atividade/ramo do negócio	64	3	 	N	 	177	 
+ 	453- seguros							
+	461- adm com inc imóveis 							
+	"462- comércio de títulos e  mo-
+     edas"	 	 		 		 	
+ 	463- conc loterias, etc. 	 	 	 	 			 
+	464- org cartão de crédito							
+	"471- transporte de tração  ani-
+     mal"							
+	"472- transporte  rodoviário  de
+     passageiros"							
+	"473- transporte  rodoviário  de
+     carga"							
+	474- transporte ferroviário							
+ 	475- transporte marítimo							
+ 	476- transporte aéreo	 	 		 	 		
+	477- atividade não definida							
+ 	481- serviços postais	 	 	 	 			
+ 	482- comunicação telefônica	 	 		 		 	
+	511- serviço de alojamento							
+	512- serviço de alimentação							
+	513- não identificado							
+	514- não identificado							
+	521- serviço reparação elétrica							
+	"522- serviço  de  reparação  de
+     veículos"							
+ 	"523- serviço  de  reparação  de
+     madeira"	 	 	 	 	 	 	 
+ 	"524- serviço  de reparação e de
+     instalação"	 	 	 	 	 	 	 
+ 	525- serviço reparação não incl	 	 	 	 	 		 
+ 	531- serviço de higiene pessoal	 	 	 	 	 	 	 
+ 	532- serviço de confecção		 	  	 	 	 	 
+ 	533- serviço pess n inclu	 	 	 	 	 	 	 
+	541- serviço cons vestuário 	 						
+	"542- serviço  de  limpeza e  de
+     conservação"							
+ 	"543- serviço  de  vigilância  e
+     guarda"							 
+	"544- serviço domiciliar remune-
+     rado"							
+	545- serviço domic n inclu							
+ 	551- serviço div artística	 	 	 	 			 
+ 	552- serviço de radiodifusão	 	 	 	 	 	 	 
+ 	571- serviço jurídico	 	 	  	  		 	
+	"572- serviço de contabilidade e
+     auditoria"							
+ 	573- serviço de assessoria		 			 	 	
+								
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+304	Atividade/ramo do negócio	64	3	 	N	 	177	 
+ 	"574- serviço  de  engenharia  e
+     arquitetura"		 	 	 	 	 	 
+	575- serviço público prop	  	 	 	 	 	 	 
+ 	576- serviço de tradução							
+	577- estudante de pintura							
+	"578- serviço técnico profissio-
+     nal "	 	 		 		 	
+ 	581- serviço auxiliar agr pecu	 	 	 	 			 
+	582- serviço auxiliar com merc							
+	583- serviço de armazenagem 							
+	"584- serviço auxiliar comércio
+     e indústria"							
+	585- serviço auxiliar seguros							
+	"586- serviço de transporte  não 
+     rodoviário"							
+ 	"587- serviço auxiliar de trans-
+     porte rodoviário"							
+ 	"588- serviço auxiliar de trans-
+     porte marítimo"	 	 		 	 		
+	"589- serviço auxiliar toda ati-
+     vidade"							
+ 	610- assistência beneficente	 	 	 	 			
+ 	611- previdência social pública	 	 		 		 	
+	"612- previdência social  parti-
+     cular"							
+	"613- sindicato associação clas-
+     se"							
+ 	"614- instituto  científico    e   
+     tecnológico"	 	 	 	 	 	 	 
+ 	"615- instituto de  filosofia  e
+     cultura"	 	 	 	 	 	 	 
+ 	616- culto atividade auxiliar	 	 	 	 	 		 
+ 	617- entidade desp recreativa	 	 	 	 	 	 	 
+ 	618- organização civ política		 	  	 	 	 	 
+ 	619- serviço comunitário social	 	 	 	 	 	 	 
+	620- não identificado	 						
+	621- serviço médico público							
+ 	622- serviço médico particular							 
+	623- serviço odontológico							
+	624- serviço de veterinária							
+ 	631- ensino público	 	 	 	 			 
+ 	632- ensino particular	 	 	 	 	 	 	 
+ 	711- poder legislativo	 	 	  	  		 	
+	712- justiça atividade auxiliar							
+ 	"713- serviço  de  administração
+     federal"		 			 	 	
+ 	"714- serviço  de  administração
+     estadual"		 	 	 	 	 	 
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+304	Atividade/ramo do negócio	64	3	 	N	 	177	 
+	"715- serviço  de  administração
+     municipal"	  	 	 	 	 	 	 
+ 	"716- serviço  de  administração
+     autárquica"							
+	"717- serviço  de  administração
+     não definida"							
+	721- exército	 	 		 		 	
+ 	722- marinha de guerra	 	 	 	 			 
+	723- aeronáutica							
+	724- polícia militar							
+	725- polícia civil							
+	726- corpo de bombeiros							
+	727- outras org gov segu							
+ 	801- org inter rep est							
+ 	"901- outra atividade não  defi-
+     nida"	 	 		 	 		
+	902- atividade mal definida							
+ 	   - não aplicável	 	 	 	 			
+305	Ramo de Atividade	67	1		N		7	
+	1- indústria de transformação							
+	3-  construção civil							
+	5- comércio							
+	7- serviços							
+	8- outros							
+	9- sem declaração							
+	 - não aplicável							
+306	Posição na ocupação	68	1	 	N	 	6	 
+ 	2- empregado	 	 	 	 	 	 	 
+ 	4- conta própria	 	 	 	 	 	 	 
+ 	6- empregador	 	 	 	 	 		 
+ 	8- não remunerado	 	 	 	 	 	 	 
+ 	9- sem declaração		 	  	 	 	 	 
+ 	 - não aplicável	 	 	 	 	 	 	 
+307	Ganhava por mês, quinzena	69	1		N		6	
+	1- mês							
+ 	3- quinzena							 
+	5- semana							
+	7- outra							
+ 	9- sem declaração	 	 	 	 			 
+ 	 - não aplicável	 	 	 	 	 	 	 
+308	Tem carteira assinada?	70	1	  	N		4	
+	2- sim							
+ 	4- não		 			 	 	
+ 	9- sem declaração		 	 	 	 	 	 
+	 - menor de 10 anos	  	 	 	 	 	 	 
+309	Rendimento Mensal dinheiro	71	9		N			
+								
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+339	Faixa de rendimento dinheiro	80	2		N		9	
+	1-       1 a   9.999	 	 		 		 	
+ 	2-  10.000 a  49.999	 	 	 	 			 
+	3-  50.000 a  99.999							
+	4- 100.000 a 299.999							
+	5- 300.000 e mais							
+	6- sem declaração							
+	7- somente benefic							
+ 	9- 9.999.999 / sem declaração							
+ 	 - não aplicável	 	 		 	 		
+310	Horas efetivas semana	82	2		N			
+311	"Rendimento mensal em dinheiro e
+ outra"	84	9	 	N			
+341	"Faixa de rendimento em dinheiro
+ e outra"	93	2		N		10	
+	1-       1 a   9.999	 	 		 		 	
+ 	2-  10.000 a  49.999	 	 	 	 			 
+	3-  50.000 a  99.999							
+	4- 100.000 a 299.999							
+	5- 300.000 e mais							
+	6- sem rendimento							
+	7- somente benefic							
+	8- não remunerado							
+	9- 9.999.999/sem declaração							
+	 - não aplicável							
+312	Horas efetivamente sem. Outro	95	2		N			
+313	Tomou provid no período?	97	1		N		4	
+	1- sim							
+	3- não							
+	9- sem declaração							
+	 - não aplicável 							
+314	Tomou  prov. Antes	98	1		N		4	
+ 	2- sim	 	 	 	 	 	 	 
+ 	4- não	 	 	 	 	 	 	 
+ 	9- sem declaração		 	  	 	 	 	 
+ 	 - não aplicável	 	 	 	 	 	 	 
+315	Que providência tomou?	99	1		N		9	
+	1- coms. empregador							
+ 	2- fez concurso							 
+	3- cons. Agência							
+	4- colocou anúncio							
+ 	5- cons. Parente	 	 	 	 			 
+ 	6- outra	 	 	 	 	 	 	 
+ 	7- nada fez	 	 	  	 		 	
+	9- sem declaração							
+	 - não aplicável	  	 	 	 	 	 	 
+9316	Quando tomou prov. (data)	100	6		N			
+316	Quando tomou prov. (dia)	100	2		N			
+346	Quando tomou prov. (mês)	102	2		N		 	
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+356	Quando tomou prov. (ano)	104	2		N			
+366	Quando tomou prov salto	106	1		N		4	
+	1- menos de 30 dias							
+	2- mais de 30 dias							
+	9- sem declaração							
+	 - não aplicável							
+317	Quanto tempo proc. (mês)	107	2		N			
+347	Quanto tempo proc. (semana)	109	2		N			
+318	Já trabalhou antes c/rem	111	1		N		4	
+	1- sim							
+	3- não							
+	9- sem declaração							
+	 - não aplicável							
+319	Já trabalhou antes s/rem	112	1		N		5	
+	2- sim							
+	4- não							
+	6- não identificado							
+	9- sem declaração							
+	 - não aplicável							
+320	Qto tempo não trabalhou (anos)	113	2		N			
+350	Qto tempo não trabalhou (mês)	115	2		N			
+360	Qto tempo não trabalhou (sem.)	117	2		N			
+321	Ocupação anterior	119	3		N		373	303
+322	Atividade anterior	122	3		N		177	304
+323	Ramo atividade anterior	125	1		N		7	
+	1- indústria de transformação							
+	3- construção civil							
+ 	5- comércio							
+	7- serviços							
+	8- outros							
+ 	9- sem declaração	 	 		 		 	
+ 	 - não aplicável 	 	 	 	 	 	 	 
+324	Posição ocupação anterior 	126	1	 	N	 	5	 
+ 	2- empregado		 	  	 	 	 	 
+ 	4- conta própria	 	 	 	 	 	 	 
+ 	6- empregador	 	 	  	 		 	
+	9- sem declaração							
+ 	 - não aplicável							 
+325	Tempo último emprego (anos)	127	2		N			
+355	Tempo último emprego (mês)	129	2		N			
+326	Porque saiu último emprego?	131	1	 	N		4	 
+ 	1- pediu para sair	 	 	 	 	 	 	 
+ 	3- foi despedido	 	 	  	 		 	
+	9- sem declaração							
+	 - não aplicável	  	 	 	 	 	 	 
+327	"Último emprego carteira assina-
+ nada"	132	1		N		4	
+	2- sim	 	 	 	 		 	
+								
+								
+								
+VARI	NOME	DESDE	TAM	CODI	S	F	CATEG	RENO
+327	"Último emprego carteira assina-
+ nada"	132	1		N		4	
+ 	4- não	 	 		 			
+	9- sem declaração							
+	 - não aplicável							
+328	Último emprego recebeu FGTS	133	1		N		4	
+	1- sim							
+	3- não							
+	9- sem declaração							
+	 - não aplicável							
+256	Idade calculada	134	3		N			

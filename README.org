@@ -1,0 +1,17 @@
+* Construct PME datasets
+
+The code here is responsible for converting the awkward format in which PME is distributed into readable csv files.
+
+The two main types of ingredients are the following:
+
+1. PME datasets, downloaded and treated
+   - Please see TBA for instructions on how to download and treat data
+2. PME dictionaries in proper format
+   - This repo contains dictionaries that reflect my attempt to parse weird PME documentation files
+   - there might be mistakes, I strongly suggest users sift through the files to ensure consistency for their use case
+
+* Tasks
+
+** Document
+- [ ] how should datasets be layed out on ~base_data_path~?
+- [ ] how should dictionaries be organized?

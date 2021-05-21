@@ -1,0 +1,360 @@
+V1	Identificação	1	8	N	
+V102	Número de Controle	1	6	N	
+V103	Número de Série	7	2	N	
+V10	Unidade da Federação	1	2	N	6
+	11- Rio de Janeiro				
+	21- São Paulo				
+	41- Minas Gerais				
+	56- Pernambuco				
+	59- Bahia				
+V11	Final do Controle 	3	3	N	
+V2	Pasta	29	5	N	
+V3	Situação	34	1	N	4
+	1- urbana				
+	3- conglomerado urbano				
+	5- rural				
+	7- conglomerado rural				
+V2001	Dia de Referência	35	2	N	
+V2002	Mês de Referência	37	2	N	
+					
+					
+VARIÁVEIS DO PARAMETRO					
+					
+					
+VARI	NOME	DESDE	TAM	F	
+V20	Ano da Pesquisa/parm	1	2	N	
+V21	Mês da Pesquisa/parm	3	2	N	
+V22	Sigla - cartão 35	5	24	L	
+					
+V101	Número no 202/203	9	4	N	
+V104	Tipo de Entrevista	13	1	N	9
+	NÃO REALIZADA TIPO A				
+	1- entrevista realizada				
+	2- fechada				
+	3- recusa				
+	4- outra				
+	NÃO REALIZADA TIPO B				
+	5- unidade vaga ou ocupada por pessoas não abrangidas pela pesquisa				
+	NÃO REALIZADA TIPO C				
+	6- unidade inexistente				
+	0- em declaração				
+	7- não identificado				
+	8- não identificado				
+	9- sem declaração				
+V105	Mês da Pesquisa	14	2	N	12
+	1- janeiro				
+	2- fevereiro				
+	3- março				
+	4- abril				
+	5- maio				
+	6- junho				
+	7- julho				
+	8- agosto				
+	9- setembro				
+	10- outubro				
+	11- novembro				
+	12- dezembro				
+V106	Remessa	16	1	N	4
+	1- remessa 1				
+	2- remessa 2				
+	3- remessa 3				
+	4- remessa 4				
+V107	Código do Entrevistador	17	3	N	
+V108	Unidade Adicional	20	1	N	3
+	1- é				
+	3- não é				
+	9- sem declaração				
+					
+					
+					
+					
+VARIÁVEIS DO DOMICÍLIO					
+					
+VARI	NOME	DESDE	TAM	F	CATEG
+V109	Total de Pessoas	21	2	N	
+V110	Total de 10 anos e mais	23	2	N	31
+	VER ARQUIVOS AUXILIARES				
+V113	Alteração no PME 2.08	28	1	N	4
+	1- tem				
+	3- não tem				
+	9- sem declaração				
+	 - não aplicável				
+					
+VARIÁVEIS DE PESSOAS					
+					
+VARI	NOME	DESDE	TAM	F	CATEG
+V201	Número de Ordem	41	2	N	
+V202	Sexo	43	1	N	3
+	1- homem				
+	3- mulher				
+	 - header				
+V203	Condição no Domicílio	44	1	N	10
+	1- chefe				
+	2- cônjuge				
+	3- filho				
+	4- outro parente				
+	5- agregado				
+	6- pensionista				
+	7- empregado doméstico				
+	8- parente empregado doméstico				
+	9- sem declaração				
+	 - header				
+V204	Condição na Família	45	1	N	10
+	1- chefe				
+	2- cônjuge				
+	3- filho				
+	4- outro parente				
+	5- agregado				
+	6- pensionista				
+	7- empregado doméstico				
+	8- parente empregado doméstico				
+	9- sem declaração				
+	 - header				
+V205	Número da Família	46	1	N	10
+	1- uma família				
+	2- duas famílias				
+	3- três famílias				
+	4- quatro famílias				
+	5- cinco famílias				
+	6- seis famílias				
+	7- sete famílias				
+	8- oito famílias				
+	9- nove famílias				
+	 - header				
+V206	Dia de Nascimento	47	2	N	34
+	VER ARQUIVOS AUXILIARES				
+					
+					
+					
+VARIÁVEIS DE PESSOAS					
+					
+VARI	NOME	DESDE	TAM	F	CATEG
+V236	Mês de Nascimento	49	2	N	16
+	1- janeiro				
+	2- fevereiro				
+	3- março				
+	4- abril				
+	5- maio				
+	6- junho				
+	7- julho				
+	8- agosto				
+	9- setembro				
+	10- outubro				
+	11- novembro				
+	12- dezembro				
+	20- idade presumida pelo morador				
+	30- idade presumida pelo entrevistador				
+	99- sem declaração				
+	 - header				
+V246	Ano de Nascimento	51	3	N	
+V207	Sabe ler e escrever	54	1	N	4
+	1- sim				
+	3- não				
+	9- sem declaração				
+	 - header				
+V208	Frequenta Escola	55	1	N	4
+	1- sim				
+	3- não				
+	9- sem declaração				
+	 - header				
+V209	Última série concluída	56	1	N	11
+	0- grau sem relação				
+	1- 1ª série				
+	2- 2ª série				
+	3- 3ª série				
+	4- 4ª série				
+	5- 5ª série				
+	6- 6ª série				
+	7- 7ª série				
+	8- 8ª série				
+	9- sem declaração				
+	 - header				
+					
+					
+VARIÁVEIS DE PESSOAS					
+					
+VARI	NOME	DESDE	TAM	F	CATEG
+V210	Grau concluído	57	1	N	10
+	0- nunca frequentou				
+	1- elementar				
+	2- médio 1º ciclo				
+	3- 1º grau				
+	4- médio 2º ciclo				
+	5- 2º grau				
+	6- superior				
+	7- doutorado ou mestrado				
+	9- sem declaração				
+	 - header				
+V211	Concluiu o curso?	58	1	N	4
+	1- sim				
+	3- não				
+	9- sem declaração				
+	- header				
+V301	Que fez na semana?	59	1	N	10
+	0- não determinado				
+	1- trabalhou				
+	2- tinha trabalhado				
+	3- procurou trabalho				
+	4- aposentado/pensionista				
+	5- estudante				
+	6- afazeres domésticos				
+	7- outra				
+	9- sem declaração				
+	 -header				
+V302	Tinha outro trabalho na semana de referência	60	1	N	4
+	1- sim				
+	3- não				
+	9- sem declaração				
+	- header				
+V303	Ocupação na semana	61	3	N	373
+	VER ARQUIVOS AUXILIARES				
+V304	Atividade ou ramo do negócio	64	3	N	177
+	VER ARQUIVOS AUXILIARES				
+					
+					
+VARIÁVEIS DE PESSOAS					
+					
+VARI	NOME	DESDE	TAM	F	CATEG
+V305	Ramo de Atividade	67	1	N	7
+	1- indústria de transformação				
+	3- construção civil				
+	5- comércio				
+	7- serviços				
+	9- sem declaração				
+	 - não aplicável				
+V306	Posição na ocupação	68	1	N	6
+	2- empregado				
+	4- conta própria				
+	6- empregador				
+	8- não remunerado				
+	9- sem declaração				
+	 - não aplicável				
+V307	"Ganhava por mês, quinzena"	69	1	N	6
+	1- mês				
+	3- quinzena				
+	5- semana				
+	7- outra				
+	9- sem declaração				
+	 - não aplicável				
+V308	Tem carteira assinada?	70	1	N	4
+	2- sim				
+	4- não				
+	9- sem declaração				
+	 - menor de 10 anos				
+V309	Rendimento Mensal em dinheiro	71	7	N	
+V339	Faixa de rendimento em dinheiro	78	1	N	9
+	1- 1 a 9.999 cruzeiros				
+	2- 10.000 a 49.999 cruzeiros				
+	3- 50.000 a 99.999 cruzeiros				
+	4- 100.000 a 299.999 cruzeiros				
+	5- 300.000 cruzeiros e mais				
+	6- sem declaração				
+	7- somente em benefícios				
+	9- 9.999.999 ou sem declaração				
+	 - não aplicável				
+V310	Horas efetivamente trabalhadas na semana	79	2	N	
+V311	Rendimento mensal em dinheiro e  outra forma	81	7	N	
+					
+					
+VARIÁVEIS DE PESSOAS					
+					
+VARI	NOME	DESDE	TAM	F	CATEG
+V341	Faixa de rendimento em dinheiro e outra forma	88	1	N	10
+	1- 1 a 9.999 cruzeiros				
+	2- 10.000 a 49.999 cruzeiros				
+	3- 50.000 a 99.999 cruzeiros				
+	4- 100.000 a 299.999 cruzeiros				
+	5- 300.000 cruzeiros e mais				
+	6- sem rendimento				
+	7- somente em benefícios				
+	8- não remunerado				
+	9- 9.999.999 ou sem declaração				
+	 - não aplicável				
+V312	Horas efetivamente trabalhadas na semana em outro trabalho	89	2	N	
+V313	Tomou providência para conseguir trabalho no período?	91	1	N	4
+	1- sim				
+	3- não				
+	9- sem declaração				
+	 - não aplicável				
+V314	Tomou providencia antes	92	1	N	4
+	2- sim				
+	4- não				
+	9- sem declaração				
+	 - não aplicável				
+V315	Que providência tomou?	93	1	N	9
+	1- Consultou empregadores				
+	2- Fez concurso				
+	3- Consultou agência ou sindicato				
+	4- Colocou ou respondeu anúncio				
+	"5- Consultou parente, amigo ou colega"				
+	6- Outra providencia				
+	7- Nada fez				
+	9- Sem declaração				
+	 - Não informado				
+V316	Quando tomou providência (dia)	94	2	N	
+V346	Quando tomou providência (mês)	96	2	N	
+V356	Quando tomou providência (ano)	98	2	N	
+V366	Quando tomou providência salto	100	1	N	4
+	1- menos de 30 dias				
+	2- mais de 30 dias				
+	9- sem declaração				
+	 - não aplicável				
+VARIÁVEIS DE PESSOAS					
+					
+VARI	NOME	DESDE	TAM	F	CATEG
+V317	Quanto tempo procurou trabalho (mês)	101	2	N	
+V347	Quanto tempo procurou trabalho (semana)	103	2	N	
+V318	Já trabalhou antes com remuneração	105	1	N	4
+	1- sim				
+	3- não				
+	9- sem declaração				
+	 - não aplicável				
+V319	Já trabalhou antes sem remuneração	106	1	N	5
+	2- sim				
+	4- não				
+	6- não identificado				
+	9- sem declaração				
+	 - não aplicável				
+V320	Quanto tempo não trabalhou (anos)	107	2	N	
+V350	Quanto tempo não trabalhou (mês)	109	2	N	
+V360	Quanto tempo não trabalhou (semana)	111	2	N	
+V321	Ocupação anterior	113	3	N	373
+	VER ARQUIVOS AUXILIARES				
+V322	Atividade anterior	116	3	N	177
+	VER ARQUIVOS AUXILIARES				
+V323	Ramo atividade anterior	119	1	N	7
+	1- indústria de transformação				
+	3- construção civil				
+	5- comércio				
+	7- serviços				
+	8- outros				
+	9- sem declaração				
+	 - não aplicável				
+V324	Posição ocupação anterior	120	1	N	5
+	2- empregado				
+	4- conta própria				
+	6- empregador				
+	9- sem declaração				
+	 - não aplicável				
+V325	Tempo no último emprego (anos)	121	2	N	
+V355	Tempo no último emprego (mês)	123	2	N	
+V326	Porque saiu último emprego?	125	1	N	4
+	1- pediu para sair				
+	3- foi despedido				
+	9- sem declaração				
+	 - não aplicável				
+					
+VARIÁVEIS DE PESSOAS					
+					
+VARI	NOME	DESDE	TAM	F	CATEG
+V327	Último emprego de carteira assinada	126	1	N	4
+	2- sim				
+	4- não				
+	9- sem declaração				
+	 - não aplicável				
+V328	Último emprego recebeu FGTS	127	1	N	4
+	1- sim				
+	3- não				
+	9- sem declaração				
+	 - não aplicável				
+V256	Idade calculada	128	3	N	
