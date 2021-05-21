@@ -1,7 +1,7 @@
-# please adapt all config below
-base_data_path:
-batch_subpaths:
-- pme80_90:
-- pme91_00:
-- pme01:
-- pme02_15:
+# please adapt all configs below
+
+# Where are data stored?
+base_data_path: "/home/gustavo/Dropbox/v2/data/PME/PME_1980_a_1990"
+
+# Should we save the parsed/corrected dictionaries?
+save_parsed_dictionaries: false
