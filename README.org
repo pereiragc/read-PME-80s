@@ -1,6 +1,5 @@
 * Construct PME datasets
-
-The code here is responsible for converting the awkward format in which PME is distributed into readable csv files.
+The code here is responsible for converting PME 1984-1990 from its raw form -- as distributed by IBGE -- into readable csv files.
 
 The two main types of ingredients are the following:
 
