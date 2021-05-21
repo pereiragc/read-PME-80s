@@ -10,6 +10,13 @@ The two main types of ingredients are the following:
    - This repo contains dictionaries that reflect my attempt to parse weird PME documentation files
    - there might be mistakes, I strongly suggest users sift through the files to ensure consistency for their use case
 
+** Dependencies
+Please install ~R~ and the following packages for the code to run properly:
+
+- data.table
+- glue
+- yaml
+
 * Tasks
 
 ** Document
