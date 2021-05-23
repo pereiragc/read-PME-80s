@@ -156,13 +156,8 @@ pmeProcessLine <- function(pmeline, dt_col, n_entry, fname,
   hhlength <- .internal_params$hhlength
   personlength <- .internal_params$personlength
 
-  ## 1. Deal with the "household substring"
 
-  hhstr <- substr(pmeline, 1, hhlength)
-  hh <- mapHousehold(hhstr, n_entry, col_breakdown)
-
-
-  ## 2. Start dealing with person substrings
+  ## Deal with person substring
   npersons <- countPersons(pmeline, .internal_params)
 
   persons <- rbindlist(lapply(seq_len(npersons), function(i) {
@@ -172,7 +167,18 @@ pmeProcessLine <- function(pmeline, dt_col, n_entry, fname,
     mapPerson(personstr, n_entry, i, col_breakdown, .internal_params)
   }))
 
-  return(list(hh = hh, persons = persons))
+  if (!nrow(persons) == 0) persons[, type := 0]
+
+
+  ## Deal with household substring
+  hhstr <- substr(pmeline, 1, hhlength)
+  hh <- mapHousehold(hhstr, n_entry, col_breakdown)
+
+  hh[, `:=`(
+    type = 1,
+    person_id = NA_integer_)] # for binding
+
+  return(rbind(hh, persons))
 }
 
 mapPerson <- function(personstr, n_entry, i, col_breakdown, .internal_params) {

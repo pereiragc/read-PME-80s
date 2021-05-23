@@ -10,11 +10,12 @@ The two main types of ingredients are the following:
    - there might be mistakes, I strongly suggest users sift through the files to ensure consistency for their use case
 
 ** Dependencies
-Please install ~R~ and the following packages for the code to run properly:
+Make sure ~R~ is installed, as well as the following packages:
 
 - data.table
 - glue
 - yaml
+- optparse
 
 * Tasks
 
