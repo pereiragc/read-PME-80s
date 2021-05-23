@@ -1,6 +1,8 @@
+
+
 #' Generates table with year / state / file path from user settings
-generatePathTables <- function(parameters) {
-  lreadraw <- list.files(file.path(parameters$base_data_path),
+generatePathTables <- function(base_data_path) {
+  lreadraw <- list.files(file.path(base_data_path),
                          recursive = TRUE, full.names = TRUE)
 
   ## Recover relevant files through .DAT extension
@@ -45,17 +47,17 @@ readRaw <- function(fname, year, state, .internal_params) {
 
 
 
-readDict <- function(yyyy, parameters, .internal_params) {
+readDict <- function(yyyy, saved_parsed_dictionary, .internal_params) {
   lf <- list.files(.internal_params$dict_path,
                    pattern = as.character(yyyy),
                    full.names = TRUE)
   if (length(lf) != 1) stop("[readDict] Ambiguous dictionary specification")
 
-  dict <- parseDictionary(yyyy, lf, parameters)
+  dict <- parseDictionary(yyyy, lf, saved_parsed_dictionary)
   dict[]
 }
 
-parseDictionary <- function(yyyy, fname, parameters) {
+parseDictionary <- function(yyyy, fname, save_parsed_dictionaries) {
   dt_input <- unique(data.table::fread(fname, header = FALSE,
                                        encoding = "Latin-1"))
 
@@ -97,7 +99,7 @@ parseDictionary <- function(yyyy, fname, parameters) {
                   Width = as.integer(Width))]
   dt_input[, `:=`(Start = Pos, End = Pos + Width - 1)]
 
-  if (parameters$save_parsed_dictionaries) {
+  if (save_parsed_dictionaries) {
     data.table::fwrite(dt_input,
                        glue("./output/treated_{basename(fname)}"))
   }
@@ -144,7 +146,7 @@ setCorrectNames <- function(dt_input, cnames_hint) {
            seq_along(candidate_header))
 
 
-  setnames(dt_input, colnames(dt_input)[indices_nonempty],
+  data.table::setnames(dt_input, colnames(dt_input)[indices_nonempty],
            candidate_header[indices_nonempty])
 
   return(TRUE)
