@@ -214,3 +214,90 @@ countPersons <- function(pmeline, .internal_params) {
 
   return(max(npersons, 0L))
 }
+
+
+convertRawData <- function(dt_raw, col_breakdown, .internal_params) {
+  lconv <- if (.internal_params$useParallel) {
+             convertRawData_parallel(dt_raw, col_breakdown, .internal_params)
+           } else {
+             convertRawData_vanilla(dt_raw, col_breakdown, .internal_params)
+           }
+}
+
+convertRawData_vanilla <-  function(dt_raw, col_breakdown, .internal_params) {
+  print("vanilla")
+  dt_raw[, .rowidx := .I]
+
+  t0 <- Sys.time()
+  dt_long <- dt_raw[, {
+    DT <- pmeProcessLine(full_line, dt_col, .rowidx, fname, col_breakdown, .internal_params)
+    DT
+  }, .rowidx]
+  t0 <- Sys.time() - t0
+
+  return(list(dtout = dt_long,
+              elapsed = t0))
+}
+
+convertRawData_parallel <- function(dt_raw, col_breakdown, .internal_params) {
+  print("parallel")
+
+  dt_raw[, .rowidx := .I]
+
+  nblocks <- .internal_params$nblocks
+
+  dt_raw[, .block := factor(as.character(rep(seq(nblocks), each = .N %/% nblocks + 1)[1:.N]))]
+
+
+  mc.cores <- getOption("mc.cores", 2)
+
+  if (!is.null(.internal_params$cores_override)) {
+    mc.cores <- .internal_params$cores_override
+  }
+
+  lDT <- split(dt_raw, by = ".block")
+
+  t0 <- Sys.time()
+  dt_long <- rbindlist(
+    parallel::mclapply(seq_len(nblocks),
+                       function(ii) {
+                         DTraw_block <- lDT[[ii]]
+                         DTraw_block[, {
+                           pmeProcessLine(full_line, dt_col, .rowidx, fname, col_breakdown, .internal_params)
+                         }, .rowidx]
+                         message(glue::glue("  parallel execution: Block {ii} finished"))
+                       },
+                       mc.cores = mc.cores)
+  )
+  t0 <- Sys.time() - t0
+
+  return(list(
+    dtout = dt_long,
+    elapsed = t0
+  ))
+
+
+
+}
+
+
+
+
+  ## message(glue::glue("[Year {yyyy}] Done in {t0} seconds"))
+
+  ## message(glue::glue("[Year {yyyy}] Casting data into wide format... "))
+  ## t0 <- Sys.time()
+  ## person <- dcast(dt_long[type == 0], n_entry + person_id ~ Name,
+  ##                 fun.aggregate = ws_handle,
+  ##                 value.var = "val",
+  ##                 fill = NA)
+  ## t0 <- Sys.time() - t0
+
+  ## t1 <- Sys.time()
+  ## hh <- dcast(dt_long[type == 1], n_entry + person_id ~ Name,
+  ##                 fun.aggregate = ws_handle,
+  ##                 value.var = "val",
+  ##                 fill = NA)
+  ## t1 <- Sys.time() - t1
+
+  ## message(glue::glue("[Year {yyyy}] Done; `person` dataset took {t0}, `household` dataset took {t1}"))
