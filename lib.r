@@ -47,17 +47,17 @@ readRaw <- function(fname, year, state, .internal_params) {
 
 
 
-readDict <- function(yyyy, saved_parsed_dictionary, .internal_params) {
+readDict <- function(yyyy, .internal_params) {
   lf <- list.files(.internal_params$dict_path,
                    pattern = as.character(yyyy),
                    full.names = TRUE)
   if (length(lf) != 1) stop("[readDict] Ambiguous dictionary specification")
 
-  dict <- parseDictionary(yyyy, lf, saved_parsed_dictionary)
+  dict <- parseDictionary(yyyy, lf)
   dict[]
 }
 
-parseDictionary <- function(yyyy, fname, save_parsed_dictionaries) {
+parseDictionary <- function(yyyy, fname) {
   dt_input <- unique(data.table::fread(fname, header = FALSE,
                                        encoding = "Latin-1"))
 
@@ -99,10 +99,6 @@ parseDictionary <- function(yyyy, fname, save_parsed_dictionaries) {
                   Width = as.integer(Width))]
   dt_input[, `:=`(Start = Pos, End = Pos + Width - 1)]
 
-  if (save_parsed_dictionaries) {
-    data.table::fwrite(dt_input,
-                       glue("./output/treated_{basename(fname)}"))
-  }
   return(dt_input)
 }
 
@@ -225,7 +221,6 @@ convertRawData <- function(dt_raw, col_breakdown, .internal_params) {
 }
 
 convertRawData_vanilla <-  function(dt_raw, col_breakdown, .internal_params) {
-  print("vanilla")
   dt_raw[, .rowidx := .I]
 
   t0 <- Sys.time()
@@ -240,14 +235,12 @@ convertRawData_vanilla <-  function(dt_raw, col_breakdown, .internal_params) {
 }
 
 convertRawData_parallel <- function(dt_raw, col_breakdown, .internal_params) {
-  print("parallel")
 
   dt_raw[, .rowidx := .I]
 
   nblocks <- .internal_params$nblocks
 
-  dt_raw[, .block := factor(as.character(rep(seq(nblocks), each = .N %/% nblocks + 1)[1:.N]))]
-
+  dt_raw[, .block := factor(as.character(setblocks(nblocks, .N)))]
 
   mc.cores <- getOption("mc.cores", 2)
 
