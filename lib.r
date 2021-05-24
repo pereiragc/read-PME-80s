@@ -255,10 +255,11 @@ convertRawData_parallel <- function(dt_raw, col_breakdown, .internal_params) {
     parallel::mclapply(seq_len(nblocks),
                        function(ii) {
                          DTraw_block <- lDT[[ii]]
-                         DTraw_block[, {
+                         DT <- DTraw_block[, {
                            pmeProcessLine(full_line, dt_col, .rowidx, fname, col_breakdown, .internal_params)
                          }, .rowidx]
-                         message(glue::glue("  parallel execution: Block {ii} finished"))
+                         message(glue::glue("     parallel: block {ii} finished"))
+                         DT
                        },
                        mc.cores = mc.cores)
   )
