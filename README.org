@@ -18,7 +18,9 @@ Make sure ~R~ is installed, as well as the following packages:
 
 * Usage
 
-1. Download PME 1980 to 1990 from IBGE website, [[ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Mensal_de_Emprego/Microdados/1980_2001/PME_1980_a_2001.zip][here]]
+1. Download PME 1980 to 1990 from IBGE website:
+
+   [[ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Mensal_de_Emprego/Microdados/1980_2001/PME_1980_a_2001.zip]]
 2. Run ~detox~ utility on all files,
    #+begin_src bash
 detox -r -v $PME_DOWNLOADED_PATH
