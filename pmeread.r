@@ -112,7 +112,7 @@ for (yyyy in  target_years) {
   dt_raw <- readYearRaw(yyyy, dt_path, .internal_params)
   t0 <- Sys.time() - t0
   n <- dt_raw[, .N]
-  message(glue::glue("[Year {yyyy}] Done reading {n} rows in {t0} seconds"))
+  message(glue::glue("[Year {yyyy}] Done reading {n} rows"))
 
   message(glue::glue("[Year {yyyy}] Converting... "))
   col_breakdown <- list(
@@ -127,7 +127,7 @@ for (yyyy in  target_years) {
   print(colnames(dt_long))
 
 
-  message(glue::glue("[Year {yyyy}] Done converting in {lconv$elapsed} seconds"))
+  message(glue::glue("[Year {yyyy}] Done"))
 
   message(glue::glue("[Year {yyyy}] Reshaping data into wide format..."))
 
@@ -137,7 +137,7 @@ for (yyyy in  target_years) {
                   value.var = "val",
                   fill = NA)
   t0 <- Sys.time() - t0
-  message(glue::glue("     cast person dataset in {t0} seconds"))
+  message(glue::glue("     cast person dataset"))
 
   t1 <- Sys.time()
   hh <- dcast(dt_long[type == 1], n_entry + person_id ~ Name,
@@ -146,7 +146,7 @@ for (yyyy in  target_years) {
                   fill = NA)
 
   t1 <- Sys.time() - t1
-  message(glue::glue("     cast household dataset in {t1} seconds"))
+  message(glue::glue("     cast household dataset"))
   message(glue::glue("[Year {yyyy}] Done."))
 
 
