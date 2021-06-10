@@ -132,7 +132,7 @@ for (yyyy in  target_years) {
   message(glue::glue("[Year {yyyy}] Reshaping data into wide format..."))
 
   t0 <- Sys.time()
-  person <- dcast(dt_long[type == 0], n_entry + person_id ~ Name,
+  person <- dcast(dt_long[type == 0], n_entry + person_id + .state ~ Name,
                   fun.aggregate = ws_handle,
                   value.var = "val",
                   fill = NA)
@@ -140,7 +140,7 @@ for (yyyy in  target_years) {
   message(glue::glue("     cast person dataset"))
 
   t1 <- Sys.time()
-  hh <- dcast(dt_long[type == 1], n_entry + person_id ~ Name,
+  hh <- dcast(dt_long[type == 1], n_entry + person_id + .state ~ Name,
                   fun.aggregate = ws_handle,
                   value.var = "val",
                   fill = NA)
@@ -160,5 +160,4 @@ for (yyyy in  target_years) {
   if (opt$save_parsed_dictionaries) fwrite(dt_col, file.path(opt$out,
                                                              glue::glue("dict-{yyyy}.csv")))
   message(glue::glue("[Year {yyyy}] Done."))
-
 }

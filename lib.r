@@ -149,7 +149,7 @@ setCorrectNames <- function(dt_input, cnames_hint) {
 }
 
 
-pmeProcessLine <- function(pmeline, dt_col, n_entry, fname,
+pmeProcessLine <- function(pmeline, dt_col, n_entry, fname, state,
                            col_breakdown, .internal_params) {
   hhlength <- .internal_params$hhlength
   personlength <- .internal_params$personlength
@@ -165,7 +165,8 @@ pmeProcessLine <- function(pmeline, dt_col, n_entry, fname,
     mapPerson(personstr, n_entry, i, col_breakdown, .internal_params)
   }))
 
-  if (!nrow(persons) == 0) persons[, type := 0]
+  if (!nrow(persons) == 0) persons[, `:=`(type = 0,
+                                          .state = state)]
 
 
   ## Deal with household substring
@@ -174,7 +175,8 @@ pmeProcessLine <- function(pmeline, dt_col, n_entry, fname,
 
   hh[, `:=`(
     type = 1,
-    person_id = NA_integer_)] # for binding
+    person_id = NA_integer_,
+    .state = state)] # for binding
 
   return(rbind(hh, persons))
 }
@@ -225,7 +227,7 @@ convertRawData_vanilla <-  function(dt_raw, col_breakdown, .internal_params) {
 
   t0 <- Sys.time()
   dt_long <- dt_raw[, {
-    DT <- pmeProcessLine(full_line, dt_col, .rowidx, fname, col_breakdown, .internal_params)
+    DT <- pmeProcessLine(full_line, dt_col, .rowidx, fname, state, col_breakdown, .internal_params)
     DT
   }, .rowidx]
   t0 <- Sys.time() - t0
@@ -257,7 +259,7 @@ convertRawData_parallel <- function(dt_raw, col_breakdown, .internal_params) {
                          message(glue::glue("     [parallel block {ii}] started"))
                          DTraw_block <- lDT[[ii]]
                          DT <- DTraw_block[, {
-                           pmeProcessLine(full_line, dt_col, .rowidx, fname, col_breakdown, .internal_params)
+                           pmeProcessLine(full_line, dt_col, .rowidx, fname, state, col_breakdown, .internal_params)
                          }, .rowidx]
                          message(glue::glue("     [parallel block {ii}] finished"))
                          DT
