@@ -124,9 +124,6 @@ for (yyyy in  target_years) {
   lconv <- convertRawData(dt_raw, col_breakdown, .internal_params)
   dt_long <- lconv$dtout
 
-  print(colnames(dt_long))
-
-
   message(glue::glue("[Year {yyyy}] Done"))
 
   message(glue::glue("[Year {yyyy}] Reshaping data into wide format..."))
