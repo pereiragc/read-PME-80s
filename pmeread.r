@@ -137,11 +137,10 @@ for (yyyy in  target_years) {
   message(glue::glue("     cast person dataset"))
 
   t1 <- Sys.time()
-  hh <- dcast(dt_long[type == 1], n_entry + person_id + .state ~ Name,
+  hh <- dcast(dt_long[type == 1], n_entry + .state ~ Name,
                   fun.aggregate = ws_handle,
                   value.var = "val",
                   fill = NA)
-
   t1 <- Sys.time() - t1
   message(glue::glue("     cast household dataset"))
   message(glue::glue("[Year {yyyy}] Done."))
